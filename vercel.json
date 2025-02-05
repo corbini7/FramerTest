@@ -1,20 +1,32 @@
 {
   "headers": [
     {
-      "source": "/Build/:wasm",
-      "headers": [{ "key": "Content-Type", "value": "application/wasm" }]
+      "source": "/Build/:all*.wasm.br",
+      "headers": [
+        { "key": "Content-Type", "value": "application/wasm" },
+        { "key": "Content-Encoding", "value": "br" }
+      ]
     },
     {
-      "source": "/Build/:data",
-      "headers": [{ "key": "Content-Type", "value": "application/octet-stream" }]
+      "source": "/Build/:all*.data.br",
+      "headers": [
+        { "key": "Content-Type", "value": "application/octet-stream" },
+        { "key": "Content-Encoding", "value": "br" }
+      ]
     },
     {
-      "source": "/Build/:framework.js",
-      "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
+      "source": "/Build/:all*.framework.js.br",
+      "headers": [
+        { "key": "Content-Type", "value": "application/javascript" },
+        { "key": "Content-Encoding", "value": "br" }
+      ]
     },
     {
-      "source": "/Build/:loader.js",
-      "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
+      "source": "/Build/:all*.loader.js.br",
+      "headers": [
+        { "key": "Content-Type", "value": "application/javascript" },
+        { "key": "Content-Encoding", "value": "br" }
+      ]
     }
   ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
