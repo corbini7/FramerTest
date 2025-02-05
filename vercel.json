@@ -1,23 +1,23 @@
 {
   "headers": [
     {
-      "source": "/Build/*.wasm",
+      "source": "/Build/:wasm",
       "headers": [{ "key": "Content-Type", "value": "application/wasm" }]
     },
     {
-      "source": "/Build/*.data",
+      "source": "/Build/:data",
       "headers": [{ "key": "Content-Type", "value": "application/octet-stream" }]
     },
     {
-      "source": "/Build/*.framework.js",
+      "source": "/Build/:framework.js",
       "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
     },
     {
-      "source": "/Build/*.br",
+      "source": "/Build/:file.br",
       "headers": [{ "key": "Content-Encoding", "value": "br" }]
     },
     {
-      "source": "/Build/*.gz",
+      "source": "/Build/:file.gz",
       "headers": [{ "key": "Content-Encoding", "value": "gzip" }]
     }
   ],
