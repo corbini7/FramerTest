@@ -43,19 +43,21 @@
       <canvas id="unity-canvas" tabindex="-1"></canvas>
     </div>
 
-    <script src="Build/novaBuildTest.loader.js"></script>
     <script>
       function resizeCanvas() {
         let canvas = document.querySelector("#unity-canvas");
 
-        // Force Fullscreen Stretch
+        // Ensure canvas resizes properly
         canvas.style.width = window.innerWidth + "px";
         canvas.style.height = window.innerHeight + "px";
       }
 
       window.addEventListener("resize", resizeCanvas);
       window.addEventListener("load", resizeCanvas);
+    </script>
 
+    <script src="Build/novaBuildTest.loader.js"></script>
+    <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/novaBuildTest.data",
         frameworkUrl: "Build/novaBuildTest.framework.js",
