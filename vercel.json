@@ -1,19 +1,19 @@
 {
   "headers": [
     {
-      "source": "/Build/:all*.wasm",
+      "source": "/Build/:wasm",
       "headers": [{ "key": "Content-Type", "value": "application/wasm" }]
     },
     {
-      "source": "/Build/:all*.data",
+      "source": "/Build/:data",
       "headers": [{ "key": "Content-Type", "value": "application/octet-stream" }]
     },
     {
-      "source": "/Build/:all*.framework.js",
+      "source": "/Build/:framework.js",
       "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
     },
     {
-      "source": "/Build/:all*.loader.js",
+      "source": "/Build/:loader.js",
       "headers": [{ "key": "Content-Type", "value": "application/javascript" }]
     }
   ],
